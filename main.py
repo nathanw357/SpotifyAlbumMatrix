@@ -1,4 +1,3 @@
-#!/user/bin/evn python
 import requests
 import time
 import sys
