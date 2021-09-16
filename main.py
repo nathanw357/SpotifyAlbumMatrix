@@ -52,6 +52,7 @@ def main():
                 handler.write(img_data)
 
             # Make image fit
+            image = Image.open('album_cover.jpg')
 
             image.thumbnail((64,64), Image.ANTIALIAS)
 
