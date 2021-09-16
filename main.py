@@ -6,7 +6,7 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 
 SPOTIFY_GET_CURRENT_TRACK_URL = 'https://api.spotify.com/v1/me/player/currently-playing'
-ACCESS_TOKEN = 'BQBeGSFyctKPBJPQIW0k21pvJwq6GcfppL7o5e95aiHGC59OTuNhHrFJk8U71tJmoe2q516edWpMvGY5DOVjaLzlVXQPnOv5oOjdDaJJZCohA43EJk572lSEajNcjL-Cn90Yhq_bDCeuTAI54xzA-gsnbgddLFLJ6M6OY-76eEOmaQN9qATlV_aiQai_yG8BzunsGa4H-zUF1OvI38yDSpBDwOul6SYH7FaJomBLefOqRaSFaLUcTxjMvMYfHrp_lzHIeJgYV7wj0plt8sRv86zFhsdzh8F1SDBhbuQ72DXW'
+ACCESS_TOKEN = 'BQCaao8A0pgVMIP_qLb-QkaQ-Ldx1Elh7gQwEA532g9pWZOcl4L7hq8cHKKkgKZ2v3Hxd8ql1maZZYdkQM5a7oCTPJjFXGi-uPeX9r5MzyjCy5dA1XhKZ5zUe3YcZeWeL5gHlFFq2JVnET9dAjwMionY9A9e5IJfvcPG4B0vHqd4NfjGlhAoJrMmemr1tyNwvnxU_JppOiWMNXQmjPqMEWRSBUXY_9BYXp3UOPIDzjgJVbV5nhNlShyqv4nkLM4lrTaPfnw3CulxlaZbYDHvRHFNK4rr6Hg-MmGK_hr15Qrc'
 
 def get_current_track(access_token):
     response = requests.get(
@@ -55,15 +55,7 @@ def main():
             image.thumbnail((64,64), Image.ANTIALIAS)
 
             matrix.SetImage(image.convert('RGB'))
-
-            try:
-                print("Press CTRL+C to STOP!")
-                while True:
-                    time.sleep(100)
-            except KeyboardInterrupt:
-                sys.exit(0)
-
-    
+            
           #  pprint(
           #      current_track_info,
           #      indent=4,
