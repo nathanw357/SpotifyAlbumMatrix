@@ -6,8 +6,7 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 
 SPOTIFY_GET_CURRENT_TRACK_URL = 'https://api.spotify.com/v1/me/player/currently-playing'
-ACCESS_TOKEN = 'BQAf1xP2c3qzQpLjYIHwMKrBKJykE9-hlkmtrk1GwX9XbQsrWk5bzcUf4LI7w6oFa61bIsqXvUkaJievM5Tyyao82v0qesv6SFxKZK8eXnSpI4WAEv4n6_wYl-4BV5jtu5aBSv1_pVOjgfkjgrzemSAMZadUj3ZTmFdMSXWbHlLzKVsadkKvsGHUQGWQcajZxB8DvQeG9JOqtEWKgk07LKGRnfdSx8SBOVSn-zRptrEgGOysNJFYkN2Euo81yLjKGbWtwCDu4U3coYG5s2fzcM9ooGOSzVmfJIf-bbZIm4sH'
-
+ACCESS_TOKEN = 'BQBeGSFyctKPBJPQIW0k21pvJwq6GcfppL7o5e95aiHGC59OTuNhHrFJk8U71tJmoe2q516edWpMvGY5DOVjaLzlVXQPnOv5oOjdDaJJZCohA43EJk572lSEajNcjL-Cn90Yhq_bDCeuTAI54xzA-gsnbgddLFLJ6M6OY-76eEOmaQN9qATlV_aiQai_yG8BzunsGa4H-zUF1OvI38yDSpBDwOul6SYH7FaJomBLefOqRaSFaLUcTxjMvMYfHrp_lzHIeJgYV7wj0plt8sRv86zFhsdzh8F1SDBhbuQ72DXW'
 
 def get_current_track(access_token):
     response = requests.get(
@@ -35,7 +34,7 @@ def get_current_track(access_token):
 
 def main():
     # Configuration for the matrix
-    options = RGBMatrixOptions
+    options = RGBMatrixOptions()
     options.rows = 64
     options.cols = 64
     options.gpio_slowdown = 4
