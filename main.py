@@ -17,8 +17,6 @@ ACCESS_TOKEN = 'BQCaao8A0pgVMIP_qLb-QkaQ-Ldx1Elh7gQwEA532g9pWZOcl4L7hq8cHKKkgKZ2
 def get_current_track():
     results = sp.current_playback()
 
-    pprint(results)
-
     track = results['item']
     track_id = results['item']['id']
     track_name = results['item']['name']
@@ -60,10 +58,10 @@ def main():
 
             matrix.SetImage(image.convert('RGB'))
             
-            pprint(
-                current_track_info,
-                indent=4,
-            )
+          #  pprint(
+          #      current_track_info,
+          #      indent=4,
+          #  )
 
         current_track_id = current_track_info['id']
 
